@@ -1,0 +1,52 @@
+Query         sequence2 
+Match_columns 71
+No_of_seqs    102 out of 106
+Neff          5.41001
+Searched_HMMs 86102
+Date          Wed Apr 17 14:31:22 2024
+Command       /usr/local/bin/hhsearch -i /tmp/tmp4t5e98p8 -d /scratch/banks/HHSuite/hhbanks-21-01-27/pdb70 -o protein_a-sequence-chunk2-sequence2-hhsearch.out.preprocessed -cpu 8 -v 0 -alt 1 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 1UIX_A Rho-associated kinase(E  99.8 4.9E-24 5.7E-29  129.5   0.0   71    1-71      1-71  (71)
+  2 1S1C_Y Transforming protein Rh  99.7 7.1E-22 8.2E-27  120.1   0.0   67    3-71      5-71  (71)
+
+No 1
+>sequence2; MatchedRegionQuery=1-71
+GSTSDVANLANEKEELNNKLKEAQEQLSRLKDEEISAAAIKAQFEKQLLTERTLKTQAVNKLAEIMNRKEP
+>1UIX_A:AUTOPDB; Probability=99.8; Identities=100%; Resolution=1.8A; MatchedRegionTemplate=-2-68; Rho-associated kinase(E.C.2.7.1.-); coiled-coil, TRANSFERASE; {Bos taurus}
+GSTSDVANLANEKEELNNKLKEAQEQLSRLKDEEISAAAIKAQFEKQLLTERTLKTQAVNKLAEIMNRKEP
+No 2
+>sequence2; MatchedRegionQuery=3-71
+GSTSDVANLANEKEELNNKLKEAQEQLSRLKDEEISAAAIKAQFEKQLLTERTLKTQAVNKLAEIMNRKEP
+>1S1C_Y:AUTOPDB; Probability=99.7; Identities=55%; Resolution=2.6A; MatchedRegionTemplate=949-1015; Transforming protein RhoA, Rho-associated, coiled-coil; coiled-coil, GTPase, Rho kinase, ROCK; HET: GNP; {Homo sapiens}
+--TKDIEILRRENEELTEKMKKAEEEYK--LEKEEEISNLKAAFEKNINTERTLKTQAVNKLAEIMNRKDF
+Done fasta alignment
+No 1
+>1UIX_A Rho-associated kinase(E.C.2.7.1.-); coiled-coil, TRANSFERASE; 1.8A {Bos taurus} SCOP: h.1.27.1
+Probab=99.80  E-value=4.9e-24  Score=129.45  Aligned_cols=71  Identities=100%  Similarity=1.167  Sum_probs=65.2  Template_Neff=5.500
+
+Q sequence2         1 GSTSDVANLANEKEELNNKLKEAQEQLSRLKDEEISAAAIKAQFEKQLLTERTLKTQAVNKLAEIMNRKEP   71 (71)
+Q Consensus         1 ~~~k~i~~l~~E~eeL~~~~k~~~ee~~~~~~~~~~~~~~i~~l~K~L~~E~~lK~qAVNKLaEIMnrkd~   71 (71)
+                      ||+++|+++++|+++|+++|+.+++++..+++....++++|++|+|+|++|+++|+|||||||||||||||
+T Consensus         1 ~~~~~i~~l~~E~eeL~~~~k~~~e~~~~~~~~~~~~~~~i~~l~K~L~~E~~lK~qAVNKLaEIMnrkd~   71 (71)
+T 1UIX_A            1 GSTSDVANLANEKEELNNKLKEAQEQLSRLKDEEISAAAIKAQFEKQLLTERTLKTQAVNKLAEIMNRKEP   71 (71)
+T ss_dssp             CHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHCC--
+T ss_pred             CcHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHhcCCC
+Confidence            78999999999999999999999988776776778889999999999999999999999999999999996
+
+
+No 2
+>1S1C_Y Transforming protein RhoA, Rho-associated, coiled-coil; coiled-coil, GTPase, Rho kinase, ROCK; HET: GNP; 2.6A {Homo sapiens} SCOP: h.1.27.1
+Probab=99.73  E-value=7.1e-22  Score=120.11  Aligned_cols=67  Identities=55%  Similarity=0.702  Sum_probs=59.9  Template_Neff=5.400
+
+Q sequence2         3 TSDVANLANEKEELNNKLKEAQEQLSRLKDEEISAAAIKAQFEKQLLTERTLKTQAVNKLAEIMNRKEP   71 (71)
+Q Consensus         3 ~k~i~~l~~E~eeL~~~~k~~~ee~~~~~~~~~~~~~~i~~l~K~L~~E~~lK~qAVNKLaEIMnrkd~   71 (71)
+                      +++|+++++|+++|+++|+.+++++.  ....+.++++|++|+|+|++|+++|+||||||||||||||+
+T Consensus         5 ~~~i~~l~~E~eeL~~~~k~~~ee~~--~~~~~~~~~~i~~l~K~L~~E~~lK~qAVNKLaEIMnrkd~   71 (71)
+T 1S1C_Y            5 TKDIEILRRENEELTEKMKKAEEEYK--LEKEEEISNLKAAFEKNINTERTLKTQAVNKLAEIMNRKDF   71 (71)
+T ss_dssp             CHHHHHHHHHHHHHHHHHHHHHHHHH--HHHHHHHHHHHHHHHHTHHHHHHHHHHHHHHHHHHHCTTC-
+T ss_pred             HHHHHHHHHHHHHHHHHHHHHHHHHH--HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHhcCCC
+Confidence            57899999999999999999998765  33456778899999999999999999999999999999986
+
+
+Done!

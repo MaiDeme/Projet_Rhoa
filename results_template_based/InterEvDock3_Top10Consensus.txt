@@ -1,0 +1,12 @@
+#3-way consensus
+#consensus_rank	decoy_name
+1	Complex_IESh7.pdb
+2	Complex_FRODOCK4.pdb
+3	Complex_SPPh3.pdb
+4	Complex_SPPh2.pdb
+5	Complex_IESh1.pdb
+6	Complex_IESh2.pdb
+7	Complex_IESh3.pdb
+8	Complex_FRODOCK1.pdb
+9	Complex_FRODOCK2.pdb
+10	Complex_IESh4.pdb

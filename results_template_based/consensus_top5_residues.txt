@@ -1,0 +1,7 @@
+#Below are the top 5 residues (on each protein partner) predicted to be involved in contacts based on the consensus of top 10 models from each method.
+#rank	proteinA	proteinB
+1       R.68.A                 K.1031.B (chain B was chain A in user inputB)
+2       L.72.A                 L.1030.C (chain C was chain B in user inputB)
+3       L.69.A                 R.1028.B (chain B was chain A in user inputB)
+4       Y.66.A                 T.1026.C (chain C was chain B in user inputB)
+5       F.39.A                 K.1022.C (chain C was chain B in user inputB)

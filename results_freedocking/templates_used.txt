@@ -1,0 +1,1 @@
+... template: 1S1C, identity: 78.9%, coverage: 94.0%, resolution: 2.6
