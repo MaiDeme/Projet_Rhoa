@@ -1,3 +1,5 @@
+import math
+import matplotlib.pyplot as plt
 
 def SASA_angstrom(dico):
     """
@@ -74,3 +76,49 @@ def deltaRSASA(dico_m1, dico_c):
                 Delta = dico_c[c][res]['rSASA'] - dico_m1[c][res]['rSASA']
                 delta[res] = Delta
     return delta
+
+
+
+def distance_mono_complex(dico_m1, dico_m2, dico_c):
+    """
+    Calculate the difference in euclidean distance between the monomer and complex structures.
+    """
+    c1,c2=dico_c['chains']
+    distances_chain1 = {}
+    distances_chain2 = {}
+
+    # Calculate distances for the first chain
+    i=0
+    for res in dico_m1[c1]['reslist']:
+        if res in dico_c[c1]['reslist']:
+            for atom in dico_m1[c1][res]['atomlist']:
+                if atom in dico_c[c1][res]['atomlist']:
+                    x1 = dico_m1[c1][res][atom]['x']
+                    y1 = dico_m1[c1][res][atom]['y']
+                    z1 = dico_m1[c1][res][atom]['z']
+                    x2 = dico_c[c1][res][atom]['x']
+                    y2 = dico_c[c1][res][atom]['y']
+                    z2 = dico_c[c1][res][atom]['z']
+                    distance = math.sqrt((x2-x1)**2 + (y2-y1)**2 + (z2-z1)**2)
+                    distances_chain1[i] = distance
+                    i+=1
+
+    # Calculate distances for the second chain
+    j=0
+    for res in dico_m2[c2]['reslist']:
+        if res in dico_c[c2]['reslist']:
+            for atom in dico_m2[c2][res]['atomlist']:
+                if atom in dico_c[c2][res]['atomlist']:
+                    x1 = dico_m2[c2][res][atom]['x']
+                    y1 = dico_m2[c2][res][atom]['y']
+                    z1 = dico_m2[c2][res][atom]['z']
+                    x2 = dico_c[c2][res][atom]['x']
+                    y2 = dico_c[c2][res][atom]['y']
+                    z2 = dico_c[c2][res][atom]['z']
+                    distance = math.sqrt((x2-x1)**2 + (y2-y1)**2 + (z2-z1)**2)
+                    distances_chain2[j] = distance
+                    j+=1
+
+    return distances_chain1, distances_chain2
+            
+
